@@ -8,9 +8,16 @@ using System.Threading.Tasks;
 namespace Flickzation.MVVM.ViewModel
 {
     class MainViewModel : ObservableObject
+
+
     {
+        public RelayCommand HomeViewCommand { get; set; }
+
+        public RelayCommand SeriesViewCommand { get; set; }
         public HomeViewModel HomeVM { get; set; }
-        
+
+        public SeriesViewModel SeriesVM { get; set; }
+
         private object _currentView;
 
         public object CurrentView
@@ -24,7 +31,18 @@ namespace Flickzation.MVVM.ViewModel
         public MainViewModel() 
         { 
             HomeVM = new HomeViewModel();
+            SeriesVM = new SeriesViewModel();
             CurrentView = HomeVM;
+
+            HomeViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = HomeVM;
+            });
+
+            SeriesViewCommand = new RelayCommand(o =>
+            {
+                CurrentView = SeriesVM;
+            });
         }
     }
 }
