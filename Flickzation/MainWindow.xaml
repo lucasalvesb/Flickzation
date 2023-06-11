@@ -30,7 +30,8 @@
                    HorizontalAlignment="Left"
                    Foreground="White"
                    FontSize="22"
-                   Margin="20, 0, 0, 0"/>
+                   Margin="20, 0, 0, 0"
+                   FontFamily="/Fonts/#Poppins"/>
 
             <StackPanel Grid.Row="1">
                 
@@ -40,7 +41,7 @@
                              FontSize="14"
                              Style="{StaticResource MenuButtonTheme}"
                              IsChecked="True"
-                             Command="{Binding HomeViewCommand}"/>
+                             Command="{Binding HomeViewCommand}" Checked="RadioButton_Checked"/>
 
                 <RadioButton Content="Movies"
                              Height="50"
