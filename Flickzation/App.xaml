@@ -2,6 +2,8 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Flickzation"
+             xmlns:viewModel="clr-namespace:Flickzation.MVVM.ViewModel"
+             xmlns:view="clr-namespace:Flickzation.MVVM.View"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
@@ -10,6 +12,11 @@
                 <ResourceDictionary Source="Theme/TextboxTheme.xaml"/>
                 
             </ResourceDictionary.MergedDictionaries>
+
+            <DataTemplate DataType="{x:Type viewModel:HomeViewModel}">
+                
+
+            </DataTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
